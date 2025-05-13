@@ -1,3 +1,90 @@
 @import "./scss/abstracts/variables";
 @import "./scss/abstracts/mixins";
 @import "./scss/base/reset";
+@import "./scss/components/header-lists";
+
+#main-container {
+  max-width: 1920px;
+  width: 100%;
+
+  header {
+    width: 100%;
+
+    .header-top {
+      background-color: $bg-secondary;
+
+      &-content-wrapper {
+        height: 36px;
+
+        #header-top-nav {
+          ul {
+            @include headerLists();
+          }
+        }
+      }
+    }
+
+    .header-bottom {
+      height: 60px;
+
+        #header-bottom-logo-cont {
+            width: 15%;
+        }
+
+      #header-bottom-nav {
+        ul {
+          @include headerLists("false");
+          gap: 20px;
+        }
+      }
+      .header-bottom-user-interactions-cont {
+        width: 20%;
+
+        #search-cont {
+          width: 135px;
+          height: 40px;
+          position: relative;
+
+          input {
+            width: 100%;
+            height: 100%;
+            border-radius: 100px;
+            background-color: $bg-secondary;
+            border: none;
+            padding-left: 45px;
+
+            &:focus {
+                outline: none;
+                border: none;
+            }
+          }
+
+          #search-btn {
+            position: absolute;
+            left: 3%;
+            top: 20%;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+          }
+        }
+      }
+      .user-action-btns {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        transition: transform 0.2s ease-in;
+
+        &:hover {
+            transform: scale(1.25)
+        }
+      }
+    }
+  }
+}
+.container {
+  @include container();
+}
+.general-flex {
+  @include flex();
+}

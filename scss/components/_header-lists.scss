@@ -1,0 +1,31 @@
+@mixin headerLists($isPageNav: "true") {
+  @include flex();
+  @if ($isPageNav == "true") {
+    li:not(:last-child) {
+      border-right: 1px solid $bg-primary;
+    }
+  }
+  li {
+    padding: 0 14px;
+  }
+
+  li > a {
+    position: relative;
+    padding-bottom: 5px;
+  }
+
+  li > a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    background-color: $bg-primary;
+    height: 2px;
+    transition: width 0.3s ease-in-out;
+  }
+
+  li > a:hover::after {
+    width: 100%;
+  }
+}
