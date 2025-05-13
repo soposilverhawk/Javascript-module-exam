@@ -1,0 +1,49 @@
+@mixin container($screenResolution: 1920px) {
+  @if ($screenResolution == 1920px) {
+    max-width: 1785px;
+  } @else if ($screenResolution: 1440px) {
+    max-width: 1344px;
+  } @else if ($screenResolution == 1240px) {
+    max-width: 1153px;
+  } @else if ($screenResolution == 1024px) {
+    max-width: 952px;
+  } @else if($screenResolution == 360px) {
+    max-width: $screenResolution;
+  }
+
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+@mixin flex($direction: row, $justify: space-between, $align: center) {
+    display: flex;
+    direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin button($isScrolled: "false") {
+    padding: 7.5px 23.92px;
+    border: none;
+    border-radius: 30px;
+    font-size: 15px;
+
+    @if ($isScrolled) {
+        background-color: $bg-primary;
+        color: #fff
+    } @else {
+        background-color: #fff;
+        color: $bg-primary;
+    }
+
+    &:hover {
+        @if ($isScrolled) {
+            background-color: #fff;
+            color: $bg-primary;
+        } @else {
+            background-color: $bg-primary;
+            color: #fff;
+        }
+    }
+}
