@@ -18,7 +18,7 @@
 
 @mixin flex($direction: row, $justify: space-between, $align: center) {
     display: flex;
-    direction: $direction;
+    flex-direction: $direction;
     justify-content: $justify;
     align-items: $align;
 }
@@ -28,6 +28,8 @@
     border: none;
     border-radius: 30px;
     font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
 
     @if ($isScrolled) {
         background-color: $bg-primary;
@@ -39,8 +41,7 @@
 
     &:hover {
         @if ($isScrolled) {
-            background-color: #fff;
-            color: $bg-primary;
+            background-color: #6b6b6b;
         } @else {
             background-color: $bg-primary;
             color: #fff;
