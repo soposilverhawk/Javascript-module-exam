@@ -80,16 +80,131 @@
           </div>
         </div>
       </header>
-      <section class="section-1 container">
-        <div class="section-1-img-cont">
-            <img src="./imgs/static-images/section-1-img.png" alt="white high quality nike sneakers with list of sponsor logos">
-        </div>
-        <div class="section-1-description-cont">
+      <main>
+        <section class="section-1 container">
+          <div class="section-1-img-cont">
+            <img
+              src="./imgs/static-images/section-1-img.png"
+              alt="white high quality nike sneakers with list of sponsor logos"
+            />
+          </div>
+          <div class="section-1-description-cont">
             <h1>Step into what feels good</h1>
-            <p>Cause everyone should know the feeling of running in that perfect pair.</p>
+            <p>
+              Cause everyone should know the feeling of running in that perfect
+              pair.
+            </p>
             <button class="button">Find Your Shoe</button>
-        </div>
-      </section>
+          </div>
+        </section>
+        <section class="products-list-section">
+          <div class="products-list-section-description container general-flex">
+            <h2>New (<span id="available-items-counter">500</span>)</h2>
+            <div class="filters-toggle-and-sort-cont general-flex">
+              <div class="filters-toggle-cont general-flex">
+                <p>Hide Filters</p>
+                <img
+                  src="./imgs/general-icons/filter-icon.png"
+                  alt="filters icon"
+                />
+              </div>
+              <div class="sort-cont">
+                <label for="sort-options">Sort By</label>
+                <select name="sort" id="sort-options">
+                  <option value="" disabled selected hidden></option>
+                  <option value="Sort By">Gender</option>
+                  <option value="Sort By">Category</option>
+                  <option value="Sort By">Price</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="products-list-section-content general-flex">
+            <aside class="products-nav-and-filters">
+              <nav class="products-category-nav">
+                <ul>
+                  <li><a href="">Shoes</a></li>
+                  <li><a href="">Sports Bras</a></li>
+                  <li><a href="">Tops & T-shirts</a></li>
+                  <li><a href="">Hoodies & Sweatshirts</a></li>
+                  <li><a href="">Jackets</a></li>
+                  <li><a href="">Trousers & Tights</a></li>
+                  <li><a href="">Shorts</a></li>
+                  <li><a href="">Tracksuits</a></li>
+                  <li><a href="">Jumpsuits & Rompers</a></li>
+                  <li><a href="">Skirts & Dresses</a></li>
+                  <li><a href="">Socks</a></li>
+                  <li><a href="">Accessories & Equipment</a></li>
+                </ul>
+              </nav>
+              <div class="filters-cont">
+                <div class="filter-cont adult-gender-filter-cont">
+                  <div class="checkboxes-cont">
+                    <div class="checkbox-header general-flex">
+                      <h3>Gender</h3>
+                      <button class="collapse-expand-btn"></button>
+                    </div>
+                    <div class="checkbox-group" id="men-group">
+                      <input type="checkbox" id="men-checkbox" />
+                      <label for="men-checkbox" id="men">Men</label>
+                    </div>
+
+                    <div class="checkbox-group" id="women-group">
+                      <input type="checkbox" id="women-checkbox" />
+                      <label for="women-checkbox" id="women">Women</label>
+                    </div>
+
+                    <div class="checkbox-group" id="unisex-group">
+                      <input type="checkbox" id="unisex-checkbox" />
+                      <label for="unisex-checkbox" id="unisex">Unisex</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="filter-cont">
+                  <div class="filter-cont kids-gender-filter-cont">
+                    <div class="checkboxes-cont" id="kids-options-cont">
+                      <div class="checkbox-header general-flex">
+                        <h3>Kids</h3>
+                        <button class="collapse-expand-btn"></button>
+                      </div>
+                      <div class="checkbox-group" id="boys-group">
+                        <input type="checkbox" id="boys-checkbox" />
+                        <label for="boys-checkbox" id="boys">Boys</label>
+                      </div>
+
+                      <div class="checkbox-group" id="girls-group">
+                        <input type="checkbox" id="girls-checkbox" />
+                        <label for="girls-checkbox" id="girls">Girls</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="filter-cont">
+                  <div class="filter-cont price-filter-cont">
+                    <div class="checkboxes-cont" id="prices-options-cont">
+                      <div class="checkbox-header general-flex">
+                        <h3>Shop By Price</h3>
+                        <button class="collapse-expand-btn"></button>
+                      </div>
+                      <div class="checkbox-group" id="under-2500">
+                        <input type="checkbox" id="under-2500" />
+                        <label for="under-2500" id="under">₹2 500.00</label>
+                      </div>
+
+                      <div class="checkbox-group" id="above-2500">
+                        <input type="checkbox" id="above-2500" />
+                        <label for="above-2500" id="above">₹2 501.00 - ₹</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </aside>
+            <div class="products-container container general-flex"></div>
+          </div>
+        </section>
+      </main>
     </div>
+    <script src="./script.js"></script>
   </body>
 </html>

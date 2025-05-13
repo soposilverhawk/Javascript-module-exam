@@ -1,7 +1,18 @@
 @import "./scss/abstracts/variables";
 @import "./scss/abstracts/mixins";
 @import "./scss/base/reset";
-@import "./scss/components/header-lists";
+@import "./scss/components/header/header-lists";
+@import "./scss/components/products-list-section/collapse-expand-btn";
+
+.container {
+  @include container();
+}
+.general-flex {
+  @include flex();
+}
+.button {
+  @include button();
+}
 
 #main-container {
   max-width: 1920px;
@@ -110,13 +121,94 @@
       }
     }
   }
-}
-.container {
-  @include container();
-}
-.general-flex {
-  @include flex();
-}
-.button {
-  @include button();
+  .products-list-section {
+    height: 850px;
+    gap: 40px;
+
+    &-description {
+      .general-flex {
+        gap: 20px;
+      }
+
+      h2 {
+        font-size: $h2-fs;
+        line-height: $h2-lh;
+        font-weight: $h1-fw;
+      }
+    }
+
+    select,
+    select:focus {
+        border: none;
+        outline: none;
+    }
+
+    select {
+        width: 30px;
+    }
+
+    aside {
+      padding: 0 80px;
+      margin-top: 15px;
+
+      ul {
+        @include headerLists("false");
+        @include flex($direction: column, $align: flex-start);
+        gap: 15px;
+        border-bottom: 1px solid $bg-primary;
+        padding-bottom: 40px;
+
+        li {
+            padding: 0;
+        }
+      }
+
+      .filters-cont {
+        width: 100%;
+        margin-top: 10px;
+        @include flex($direction: column, $align: flex-start);
+
+        .filter-cont {
+          width: 100%;
+
+          .checkboxes-cont {
+            @include flex($direction: column, $align: flex-start);
+            padding: 20px 0;
+            padding-bottom: 20px;
+
+            input[type="checkbox"],
+            label {
+                cursor: pointer;
+            }
+
+            .checkbox-group {
+                background-color: red;
+                display: none;
+            }
+
+            .checkbox-header {
+                width: 100%;
+
+                button {
+                    @include collapseExpandBtn();
+                }
+            }
+          }
+          #prices-options-cont,
+          #kids-options-cont {
+            justify-content: space-evenly;
+          }
+        }
+
+        .filter-cont:not(:last-child) {
+            border-bottom: 1px solid $bg-primary;
+        }
+      }
+    }
+
+    .products-container {
+      width: 76%;
+      height: 200px;
+    }
+  }
 }

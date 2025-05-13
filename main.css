@@ -57,6 +57,33 @@ a {
   text-decoration: none;
 }
 
+.container {
+  max-width: 1785px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.general-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button {
+  padding: 7.5px 23.92px;
+  border: none;
+  border-radius: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  background-color: #111111;
+  color: #fff;
+}
+.button:hover {
+  background-color: #6b6b6b;
+}
+
 #main-container {
   max-width: 1920px;
   width: 100%;
@@ -199,30 +226,118 @@ a {
   line-height: 60px;
   text-transform: uppercase;
 }
-
-.container {
-  max-width: 1785px;
-  width: 90%;
-  margin: 0 auto;
+#main-container .products-list-section {
+  height: 850px;
+  gap: 40px;
 }
-
-.general-flex {
+#main-container .products-list-section-description .general-flex {
+  gap: 20px;
+}
+#main-container .products-list-section-description h2 {
+  font-size: 24px;
+  line-height: 31.2px;
+  font-weight: 500;
+}
+#main-container .products-list-section select,
+#main-container .products-list-section select:focus {
+  border: none;
+  outline: none;
+}
+#main-container .products-list-section select {
+  width: 30px;
+}
+#main-container .products-list-section aside {
+  padding: 0 80px;
+  margin-top: 15px;
+}
+#main-container .products-list-section aside ul {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+  border-bottom: 1px solid #111111;
+  padding-bottom: 40px;
 }
-
-.button {
-  padding: 7.5px 23.92px;
-  border: none;
-  border-radius: 30px;
-  font-size: 15px;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
+#main-container .products-list-section aside ul li {
+  padding: 0 14px;
+}
+#main-container .products-list-section aside ul li > a {
+  position: relative;
+  padding-bottom: 5px;
+}
+#main-container .products-list-section aside ul li > a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
   background-color: #111111;
-  color: #fff;
+  height: 2px;
+  transition: width 0.3s ease-in-out;
 }
-.button:hover {
-  background-color: #6b6b6b;
+#main-container .products-list-section aside ul li > a:hover::after {
+  width: 100%;
+}
+#main-container .products-list-section aside ul li {
+  padding: 0;
+}
+#main-container .products-list-section aside .filters-cont {
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+#main-container .products-list-section aside .filters-cont .filter-cont {
+  width: 100%;
+}
+#main-container .products-list-section aside .filters-cont .filter-cont .checkboxes-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px 0;
+  padding-bottom: 20px;
+}
+#main-container .products-list-section aside .filters-cont .filter-cont .checkboxes-cont input[type=checkbox],
+#main-container .products-list-section aside .filters-cont .filter-cont .checkboxes-cont label {
+  cursor: pointer;
+}
+#main-container .products-list-section aside .filters-cont .filter-cont .checkboxes-cont .checkbox-group {
+  background-color: red;
+  display: none;
+}
+#main-container .products-list-section aside .filters-cont .filter-cont .checkboxes-cont .checkbox-header {
+  width: 100%;
+}
+#main-container .products-list-section aside .filters-cont .filter-cont .checkboxes-cont .checkbox-header button {
+  width: 5px;
+  height: 10px;
+  border: none;
+  border-left: 2px solid #111111;
+  border-bottom: 2px solid #111111;
+  transform: rotate(-50deg);
+  transition: transform 0.3s ease-in-out;
+  background-color: transparent;
+  cursor: pointer;
+}
+#main-container .products-list-section aside .filters-cont .filter-cont .checkboxes-cont .checkbox-header button:hover {
+  transform: rotate(130deg);
+}
+#main-container .products-list-section aside .filters-cont .filter-cont #prices-options-cont,
+#main-container .products-list-section aside .filters-cont .filter-cont #kids-options-cont {
+  justify-content: space-evenly;
+}
+#main-container .products-list-section aside .filters-cont .filter-cont:not(:last-child) {
+  border-bottom: 1px solid #111111;
+}
+#main-container .products-list-section .products-container {
+  width: 76%;
+  height: 200px;
 }/*# sourceMappingURL=main.css.map */
