@@ -17,6 +17,7 @@
 #main-container {
   max-width: 1920px;
   width: 100%;
+  margin: 0 auto;
 
   header {
     width: 100%;
@@ -124,6 +125,7 @@
   .products-list-section {
     height: 850px;
     gap: 40px;
+    justify-content: center;
 
     &-description {
       .general-flex {
@@ -139,12 +141,12 @@
 
     select,
     select:focus {
-        border: none;
-        outline: none;
+      border: none;
+      outline: none;
     }
 
     select {
-        width: 30px;
+      width: 30px;
     }
 
     aside {
@@ -159,7 +161,7 @@
         padding-bottom: 40px;
 
         li {
-            padding: 0;
+          padding: 0;
         }
       }
 
@@ -178,20 +180,20 @@
 
             input[type="checkbox"],
             label {
-                cursor: pointer;
+              cursor: pointer;
             }
 
             .checkbox-group {
-                background-color: red;
-                display: none;
+              background-color: red;
+              display: none;
             }
 
             .checkbox-header {
-                width: 100%;
+              width: 100%;
 
-                button {
-                    @include collapseExpandBtn();
-                }
+              button {
+                @include collapseExpandBtn();
+              }
             }
           }
           #prices-options-cont,
@@ -201,14 +203,58 @@
         }
 
         .filter-cont:not(:last-child) {
-            border-bottom: 1px solid $bg-primary;
+          border-bottom: 1px solid $bg-primary;
         }
       }
     }
 
-    .products-container {
-      width: 76%;
-      height: 200px;
+    .products-list-section-content {
+      display: flex;
+      gap: 48px;
+      margin-top: 25px;
+
+      .products-container {
+        @include flex($direction: column);
+
+        #products-wrapper {
+          padding-right: 5%;
+          @include flex();
+          flex-wrap: wrap;
+          column-gap: 3%;
+          row-gap: 18px;
+
+          .product-card {
+            width: 25%;
+            height: 533px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+
+            &:hover {
+              transform: scale(1.1);
+            }
+
+            .product-img,
+            .product-description-cont,
+            .product-img img {
+              width: 100%;
+            }
+            .product-description-cont {
+              height: 30%;
+              @include flex(
+                $direction: column,
+                $justify: space-evenly,
+                $align: flex-start
+              );
+            }
+            .product-status {
+              color: $bg-tertiary;
+            }
+          }
+        }
+        #products-pagination-wrapper {
+            margin-top: 51px;
+        }
+      }
     }
   }
 }

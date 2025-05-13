@@ -87,6 +87,7 @@ a {
 #main-container {
   max-width: 1920px;
   width: 100%;
+  margin: 0 auto;
 }
 #main-container header {
   width: 100%;
@@ -229,6 +230,7 @@ a {
 #main-container .products-list-section {
   height: 850px;
   gap: 40px;
+  justify-content: center;
 }
 #main-container .products-list-section-description .general-flex {
   gap: 20px;
@@ -337,7 +339,52 @@ a {
 #main-container .products-list-section aside .filters-cont .filter-cont:not(:last-child) {
   border-bottom: 1px solid #111111;
 }
-#main-container .products-list-section .products-container {
-  width: 76%;
-  height: 200px;
+#main-container .products-list-section .products-list-section-content {
+  display: flex;
+  gap: 48px;
+  margin-top: 25px;
+}
+#main-container .products-list-section .products-list-section-content .products-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+#main-container .products-list-section .products-list-section-content .products-container #products-wrapper {
+  padding-right: 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  -moz-column-gap: 3%;
+       column-gap: 3%;
+  row-gap: 18px;
+}
+#main-container .products-list-section .products-list-section-content .products-container #products-wrapper .product-card {
+  width: 25%;
+  height: 533px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+#main-container .products-list-section .products-list-section-content .products-container #products-wrapper .product-card:hover {
+  transform: scale(1.1);
+}
+#main-container .products-list-section .products-list-section-content .products-container #products-wrapper .product-card .product-img,
+#main-container .products-list-section .products-list-section-content .products-container #products-wrapper .product-card .product-description-cont,
+#main-container .products-list-section .products-list-section-content .products-container #products-wrapper .product-card .product-img img {
+  width: 100%;
+}
+#main-container .products-list-section .products-list-section-content .products-container #products-wrapper .product-card .product-description-cont {
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+#main-container .products-list-section .products-list-section-content .products-container #products-wrapper .product-card .product-status {
+  color: #9E3500;
+}
+#main-container .products-list-section .products-list-section-content .products-container #products-pagination-wrapper {
+  margin-top: 51px;
 }/*# sourceMappingURL=main.css.map */
