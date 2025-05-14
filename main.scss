@@ -369,6 +369,10 @@
 
       .social-links-cont {
         gap: 16px;
+
+        img {
+          cursor: pointer;
+        }
       }
     }
   }

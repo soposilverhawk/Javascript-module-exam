@@ -505,4 +505,7 @@ a {
 }
 #main-container footer .footer-links-and-socials-cont .social-links-cont {
   gap: 16px;
+}
+#main-container footer .footer-links-and-socials-cont .social-links-cont img {
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */
