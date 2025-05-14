@@ -253,6 +253,11 @@
         }
         #products-pagination-wrapper {
             margin-top: 51px;
+
+            .products-btn {
+              padding: 10px 15px;
+              cursor: pointer;
+            }
         }
       }
     }

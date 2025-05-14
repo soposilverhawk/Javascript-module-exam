@@ -9,8 +9,12 @@ fetch("data.json")
   .then((data) => {
     allProducts = data;
     getProductsSet(setStartIdx, setEndIdx);
+    const allProductsPagesNum = generateProductsPagination(allProducts);
+    generateProductsPaginationHTML(allProductsPagesNum)
     const nextBtn = document.querySelector(".next-btn");
     const prevBtn = document.querySelector(".prev-btn");
+
+    console.log(allProductsPagesNum)
 
     nextBtn.addEventListener("click", () => {
       if (setEndIdx < allProducts.length) {
@@ -59,4 +63,23 @@ function generateProductSetHTML(productsSet) {
       productsContainerWrapper.appendChild(productContainer);
     }
   );
+}
+
+function generateProductsPagination (allProductsArr) {
+  const totalPages = Math.ceil(allProductsArr.length / 6);
+  return totalPages;
+}
+
+function generateProductsPaginationHTML (totalPagesCount) {
+  const productsPaginationWrapper = document.getElementById("products-pagination-wrapper");
+
+  let buttonsHTML = `<button class="prev-btn products-btn">prev</button>`
+
+  for (let i = 1; i < totalPagesCount; i++) {
+    buttonsHTML += `<button class="products-btn" id="${i}">${i}</button>`
+  }
+
+  buttonsHTML += `<button class="next-btn products-btn">next</button>`
+
+  productsPaginationWrapper.innerHTML = buttonsHTML
 }

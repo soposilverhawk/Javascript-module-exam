@@ -387,4 +387,8 @@ a {
 }
 #main-container .products-list-section .products-list-section-content .products-container #products-pagination-wrapper {
   margin-top: 51px;
+}
+#main-container .products-list-section .products-list-section-content .products-container #products-pagination-wrapper .products-btn {
+  padding: 10px 15px;
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */
