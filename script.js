@@ -1,35 +1,45 @@
 const productsContainerWrapper = document.getElementById("products-wrapper");
-let productsData = [];
-let productsCount = 0;
+let allProducts = [];
+let productsSet = [];
+let setStartIdx = 0;
+let setEndIdx = 6;
 
 fetch("data.json")
   .then((res) => res.json())
   .then((data) => {
-    let { slicedProductsArr, newStartingIdx } = getProductSet(
-      data,
-      productsCount
-    );
-    productsCount = newStartingIdx;
-    console.log(productsCount);
-    generateProductSetHTML(slicedProductsArr);
+    allProducts = data;
+    getProductsSet(setStartIdx, setEndIdx);
+    const nextBtn = document.querySelector(".next-btn");
+    const prevBtn = document.querySelector(".prev-btn");
+
+    nextBtn.addEventListener("click", () => {
+      if (setEndIdx < allProducts.length) {
+        setStartIdx += 6;
+        setEndIdx += 6;
+        getProductsSet(setStartIdx, setEndIdx);
+      }
+    });
+
+    prevBtn.addEventListener("click", () => {
+      if (setStartIdx >= 6) {
+        setStartIdx -= 6;
+        setEndIdx -= 6;
+        getProductsSet(setStartIdx, setEndIdx);
+      }
+    });
   })
   .catch((err) => {
     console.log(err);
     productsContainerWrapper.innerHTML = `An error occured while trying to load the data: ${err}`;
   });
 
-function getProductSet(productsArray, startingIdx) {
-  if (startingIdx < productsArray.length) {
-    let endingIdx = startingIdx + 6;
-    const sixProductsArray = productsArray.slice(startingIdx, endingIdx);
-    return {
-      slicedProductsArr: sixProductsArray,
-      newStartingIdx: endingIdx,
-    };
-  }
+function getProductsSet(startingIdx, endingIdx) {
+  productsSet = allProducts.slice(startingIdx, endingIdx);
+  generateProductSetHTML(productsSet);
 }
 
 function generateProductSetHTML(productsSet) {
+  productsContainerWrapper.innerHTML = "";
   productsSet.forEach(
     ({ imageUrl, shortdescription, status, Title, category, price, id }) => {
       const productContainer = document.createElement("div");
