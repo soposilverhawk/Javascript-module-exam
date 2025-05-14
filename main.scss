@@ -123,9 +123,9 @@
     }
   }
   .products-list-section {
-    height: 850px;
     gap: 40px;
     justify-content: center;
+    margin-bottom: 120px;
 
     &-description {
       .general-flex {
@@ -252,12 +252,68 @@
           }
         }
         #products-pagination-wrapper {
-            margin-top: 51px;
+          margin-top: 51px;
+          // fix the positioning to align with the button in the first section
+          background-color: red;
 
-            .products-btn {
-              padding: 10px 15px;
-              cursor: pointer;
-            }
+          .products-btn {
+            padding: 10px 15px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  .essentials-section {
+    @include flex($direction: column);
+    height: 785px;
+    margin-bottom: 19px;
+
+    .essentials-header {
+      width: 100%;
+      height: 20%;
+      @include flex($direction: column, $justify: space-around);
+
+      h2 {
+        font-size: $h1-fs;
+        line-height: $h1-lh;
+        font-weight: $h1-fw;
+        text-transform: uppercase;
+      }
+    }
+
+    .essentials-content-cont {
+      width: 100%;
+      height: 80%;
+      @include flex($direction: column, $justify: space-evenly, $align: flex-start);
+
+      .essentials-content-header {
+        width: 52%;
+
+        h3 {
+          font-size: 23px;
+          line-height: 28px;
+          font-weight: $h1-fw;
+        }
+        p {
+          font-size: 15px;
+          line-height: 24px;
+          font-weight: 400;
+        }
+      }
+
+      .essentials-content-wrapper {
+        width: 100%;
+        
+        .essentials-img-cont {
+          position: relative;
+
+          & .essentials-button {
+            position: absolute;
+            bottom: 48px;
+            left: 48px;
+            @include button($isScrolled: "true");
+          }
         }
       }
     }

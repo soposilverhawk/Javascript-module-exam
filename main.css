@@ -82,6 +82,7 @@ a {
 }
 .button:hover {
   background-color: #6b6b6b;
+  color: #fff;
 }
 
 #main-container {
@@ -228,9 +229,9 @@ a {
   text-transform: uppercase;
 }
 #main-container .products-list-section {
-  height: 850px;
   gap: 40px;
   justify-content: center;
+  margin-bottom: 120px;
 }
 #main-container .products-list-section-description .general-flex {
   gap: 20px;
@@ -387,8 +388,75 @@ a {
 }
 #main-container .products-list-section .products-list-section-content .products-container #products-pagination-wrapper {
   margin-top: 51px;
+  background-color: red;
 }
 #main-container .products-list-section .products-list-section-content .products-container #products-pagination-wrapper .products-btn {
   padding: 10px 15px;
   cursor: pointer;
+}
+#main-container .essentials-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 785px;
+  margin-bottom: 19px;
+}
+#main-container .essentials-section .essentials-header {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+#main-container .essentials-section .essentials-header h2 {
+  font-size: 54px;
+  line-height: 60px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+#main-container .essentials-section .essentials-content-cont {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+#main-container .essentials-section .essentials-content-cont .essentials-content-header {
+  width: 52%;
+}
+#main-container .essentials-section .essentials-content-cont .essentials-content-header h3 {
+  font-size: 23px;
+  line-height: 28px;
+  font-weight: 500;
+}
+#main-container .essentials-section .essentials-content-cont .essentials-content-header p {
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 400;
+}
+#main-container .essentials-section .essentials-content-cont .essentials-content-wrapper {
+  width: 100%;
+}
+#main-container .essentials-section .essentials-content-cont .essentials-content-wrapper .essentials-img-cont {
+  position: relative;
+}
+#main-container .essentials-section .essentials-content-cont .essentials-content-wrapper .essentials-img-cont .essentials-button {
+  position: absolute;
+  bottom: 48px;
+  left: 48px;
+  padding: 7.5px 23.92px;
+  border: none;
+  border-radius: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  background-color: #fff;
+  color: #111111;
+}
+#main-container .essentials-section .essentials-content-cont .essentials-content-wrapper .essentials-img-cont .essentials-button:hover {
+  background-color: #111111;
+  color: #fff;
 }/*# sourceMappingURL=main.css.map */

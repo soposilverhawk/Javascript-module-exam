@@ -31,7 +31,7 @@
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 
-    @if ($isScrolled) {
+    @if ($isScrolled == "false") {
         background-color: $bg-primary;
         color: #fff
     } @else {
@@ -40,10 +40,11 @@
     }
 
     &:hover {
-        @if ($isScrolled) {
-            background-color: #6b6b6b;
-        } @else {
+        @if ($isScrolled == "true") {
             background-color: $bg-primary;
+            color: #fff;
+        } @else {
+            background-color: #6b6b6b;
             color: #fff;
         }
     }

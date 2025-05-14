@@ -10,11 +10,12 @@ fetch("data.json")
     allProducts = data;
     getProductsSet(setStartIdx, setEndIdx);
     const allProductsPagesNum = generateProductsPagination(allProducts);
-    generateProductsPaginationHTML(allProductsPagesNum)
+    generateProductsPaginationHTML(allProductsPagesNum);
     const nextBtn = document.querySelector(".next-btn");
     const prevBtn = document.querySelector(".prev-btn");
 
-    console.log(allProductsPagesNum)
+    console.log(allProductsPagesNum);
+    // add functionality to navigate according to page indicators and not only next and previous buttons
 
     nextBtn.addEventListener("click", () => {
       if (setEndIdx < allProducts.length) {
@@ -65,21 +66,23 @@ function generateProductSetHTML(productsSet) {
   );
 }
 
-function generateProductsPagination (allProductsArr) {
+function generateProductsPagination(allProductsArr) {
   const totalPages = Math.ceil(allProductsArr.length / 6);
   return totalPages;
 }
 
-function generateProductsPaginationHTML (totalPagesCount) {
-  const productsPaginationWrapper = document.getElementById("products-pagination-wrapper");
+function generateProductsPaginationHTML(totalPagesCount) {
+  const productsPaginationWrapper = document.getElementById(
+    "products-pagination-wrapper"
+  );
 
-  let buttonsHTML = `<button class="prev-btn products-btn">prev</button>`
+  let buttonsHTML = `<button class="prev-btn products-btn">prev</button>`;
 
-  for (let i = 1; i < totalPagesCount; i++) {
-    buttonsHTML += `<button class="products-btn" id="${i}">${i}</button>`
+  for (let i = 1; i <= totalPagesCount; i++) {
+    buttonsHTML += `<button class="products-btn" id="${i}">${i}</button>`;
   }
 
-  buttonsHTML += `<button class="next-btn products-btn">next</button>`
+  buttonsHTML += `<button class="next-btn products-btn">next</button>`;
 
-  productsPaginationWrapper.innerHTML = buttonsHTML
+  productsPaginationWrapper.innerHTML = buttonsHTML;
 }
