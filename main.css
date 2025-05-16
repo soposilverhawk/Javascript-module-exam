@@ -387,12 +387,14 @@ a {
   color: #9E3500;
 }
 #main-container .products-list-section .products-list-section-content .products-container #products-pagination-wrapper {
+  max-width: 600px;
+  width: 100%;
   margin-top: 51px;
-  background-color: red;
 }
 #main-container .products-list-section .products-list-section-content .products-container #products-pagination-wrapper .products-btn {
   padding: 10px 15px;
   cursor: pointer;
+  border: 1px solid gray;
 }
 #main-container .essentials-section {
   display: flex;
