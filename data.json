@@ -123,7 +123,7 @@
     "price": 199.99,
     "category": "shoes",
     "imageUrl": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/6ae4936a-eb9f-4ef3-99d8-3bbca6b41260/NIKE+ZOOMX+ULTRAFLY+TRAIL.png",
-    "status": "Just In"
+    "status": "Sustainable Materials"
   },
   {
     "id": 7,
@@ -140,7 +140,8 @@
     "shortdescription": "Breathable and sweat-wicking trail running tank for women.",
     "price": 39.99,
     "category": "apparel",
-    "imageUrl": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/3cf4f85c-310e-4429-8216-72ff201de862/W+NK+TRAIL+DF+TANK.png"
+    "imageUrl": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/3cf4f85c-310e-4429-8216-72ff201de862/W+NK+TRAIL+DF+TANK.png",
+    "status": "Promo Exclusion"
   },
   {
     "id": 9,
@@ -148,7 +149,8 @@
     "shortdescription": "Packable and lightweight windbreaker for trail runners.",
     "price": 109.99,
     "category": "apparel",
-    "imageUrl": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/9cc5bb85-e22b-4416-b803-81dc7857ca11/W+NK+TRAIL+SFADV+JACKET.png"
+    "imageUrl": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/9cc5bb85-e22b-4416-b803-81dc7857ca11/W+NK+TRAIL+SFADV+JACKET.png",
+    "status": "Just In"
   },
   {
     "id": 10,
@@ -156,7 +158,8 @@
     "shortdescription": "High-rise trail leggings with extra stretch and support.",
     "price": 74.99,
     "category": "apparel",
-    "imageUrl": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/ed7f6eff-82df-423b-97db-88ab39cb1e4d/W+NK+DF+GO+HR+7%2F8+TRAIL+TGHT.png"
+    "imageUrl": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/ed7f6eff-82df-423b-97db-88ab39cb1e4d/W+NK+DF+GO+HR+7%2F8+TRAIL+TGHT.png",
+    "status": "Promo Exclusion"
   },
   {
     "id": 11,
@@ -164,6 +167,7 @@
     "shortdescription": "Half-zip thermal midlayer for cold-weather trail runs.",
     "price": 89.99,
     "category": "apparel",
-    "imageUrl": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/91e67129-3dca-49ba-8562-369297fe2335/M+NK+DF+TRAIL+MIDLAYER+HZ.png"
+    "imageUrl": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/91e67129-3dca-49ba-8562-369297fe2335/M+NK+DF+TRAIL+MIDLAYER+HZ.png",
+    "status": "Sustainable Materials"
   }
 ]
