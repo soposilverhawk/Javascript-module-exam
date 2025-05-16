@@ -255,13 +255,18 @@
           max-width: 600px;
           width: 100%;
           margin-top: 51px;
-          // background-color: red;
-          // fix the positioning to align with the button in the first section
 
-          .products-btn {
+          .page-btn,
+          .prev-btn,
+          .next-btn {
             padding: 10px 15px;
             cursor: pointer;
             border: 1px solid gray;
+          }
+
+          .active-page {
+            background-color: #393846;
+            color: #fff;
           }
         }
       }

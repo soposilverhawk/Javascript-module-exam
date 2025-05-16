@@ -391,10 +391,16 @@ a {
   width: 100%;
   margin-top: 51px;
 }
-#main-container .products-list-section .products-list-section-content .products-container #products-pagination-wrapper .products-btn {
+#main-container .products-list-section .products-list-section-content .products-container #products-pagination-wrapper .page-btn,
+#main-container .products-list-section .products-list-section-content .products-container #products-pagination-wrapper .prev-btn,
+#main-container .products-list-section .products-list-section-content .products-container #products-pagination-wrapper .next-btn {
   padding: 10px 15px;
   cursor: pointer;
   border: 1px solid gray;
+}
+#main-container .products-list-section .products-list-section-content .products-container #products-pagination-wrapper .active-page {
+  background-color: #393846;
+  color: #fff;
 }
 #main-container .essentials-section {
   display: flex;
