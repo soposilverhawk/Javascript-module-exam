@@ -23,63 +23,7 @@
   </head>
   <body>
     <div id="main-container">
-      <header>
-        <div class="header-top">
-          <div class="header-top-content-wrapper container general-flex">
-            <div id="header-top-logo-cont">
-              <img
-                src="./imgs/logo/Basketball-Nike-logo.png"
-                alt="Black silhouette of a man playing basketball"
-              />
-            </div>
-            <nav id="header-top-nav">
-              <ul class="general-flex">
-                <li><a href="">Find a Store</a></li>
-                <li><a href="">Help</a></li>
-                <li><a href="">Join Us</a></li>
-                <li><a href="">Sign In</a></li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-        <div class="header-bottom container general-flex">
-          <div id="header-bottom-logo-cont">
-            <img src="./imgs/logo/Nike-logo.png" alt="Nike logo" />
-          </div>
-          <nav id="header-bottom-nav">
-            <ul class="general-flex">
-              <li><a href="">New & Featured</a></li>
-              <li><a href="">Men</a></li>
-              <li><a href="">Women</a></li>
-              <li><a href="">Kids</a></li>
-              <li><a href="">Sale</a></li>
-              <li><a href="">SNKRS</a></li>
-            </ul>
-          </nav>
-          <div class="header-bottom-user-interactions-cont general-flex">
-            <form id="search-cont">
-              <input type="text" placeholder="Search" />
-              <button id="search-btn">
-                <img
-                  src="./imgs/general-icons/Search-icon.png"
-                  alt="search icon"
-                />
-              </button>
-            </form>
-            <div id="save-and-cart-cont">
-              <button id="save-btn" class="user-action-btns">
-                <img
-                  src="./imgs/general-icons/heart-icon.png"
-                  alt="heart icon"
-                />
-              </button>
-              <button id="cart-btn" class="user-action-btns">
-                <img src="./imgs/general-icons/cart-icon.png" alt="cart icon" />
-              </button>
-            </div>
-          </div>
-        </div>
-      </header>
+      <header id="header"></header>
       <main>
         <section class="section-1 container">
           <div class="section-1-img-cont">
@@ -331,6 +275,7 @@
         </div>
       </footer>
     </div>
+    <script type="module" src="./loadHeader.js"></script>
     <script src="./script.js"></script>
   </body>
 </html>

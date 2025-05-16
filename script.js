@@ -1,3 +1,5 @@
+import { loadHeader } from "./loadHeader";
+loadHeader();
 const productsContainerWrapper = document.getElementById("products-wrapper");
 let allProducts = [];
 let productsSet = [];
