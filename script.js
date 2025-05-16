@@ -1,5 +1,7 @@
 import { loadHeader } from "./loadHeader.js";
+import { loadFooter } from "./loadFooter.js";
 loadHeader();
+loadFooter();
 const productsContainerWrapper = document.getElementById("products-wrapper");
 let allProducts = [];
 let productsSet = [];
