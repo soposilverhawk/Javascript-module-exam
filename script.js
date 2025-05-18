@@ -153,8 +153,8 @@ window.addEventListener("scroll", () => {
   console.log(window.scrollY)
 });
 
-// fix the issue with the first page-btn not getting the active class
 
 // tomorrow:
-// 1. do search functionality tomorrow by name
-// 2. scroll on 80px to change bg to black, make text white and header fixed
+// 1. do search functionality tomorrow by name;
+// 2. On click on each of the products it should take the user to the product details page
+// 3. Fix the issue with the first page-btn not getting active class
