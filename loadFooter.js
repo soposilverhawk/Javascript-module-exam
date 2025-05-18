@@ -8,7 +8,7 @@ async function loadFooter() {
     const data = await res.text();
     const footer = document.getElementById("footer");
     footer.innerHTML = data;
-  } catch (error) {
+  } catch (err) {
     console.error("Failed to load header:", err);
   }
 }
