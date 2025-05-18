@@ -83,9 +83,8 @@ function updateActivePageButton() {
   console.log(productsBtns);
   productsBtns.forEach((btn) => {
     btn.classList.remove("active-page");
-    console.log(btn)
+    console.log(btn);
   });
-
 
   const activeBtn = document.getElementById(currentPage.toString());
   if (activeBtn) {
@@ -129,5 +128,17 @@ function setupPaginationControls() {
   });
 }
 
+function handleScroll () {
+  const sectionsContainer = document.querySelector(".main-container");
+  sectionsContainer.classList.toggle("sections-container-scrolled");
+}
+
+handleScroll();
 
 // fix the issue with the first page-btn not getting the active class
+
+// tomorrow:
+// 1. do search functionality tomorrow by name
+// 2. scroll on 80px to change bg to black, make text white and header fixed
+
+

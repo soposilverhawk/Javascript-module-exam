@@ -1,16 +1,22 @@
-@mixin collapseExpandBtn() {
-    width: 5px;
-    height: 10px;
-    border: none;
+@mixin collapseExpandBtn($isPageScrolled: "false") {
+  width: 5px;
+  height: 10px;
+  border: none;
+  transform: rotate(-50deg);
+  transition: transform 0.3s ease-in-out;
+  background-color: transparent;
+  cursor: pointer;
+
+  @if ($isPageScrolled == "false") {
     border-left: 2px solid $bg-primary;
     border-bottom: 2px solid $bg-primary;
-    transform: rotate(-50deg);
-    transition: transform 0.3s ease-in-out;
-    background-color: transparent;
-    cursor: pointer;
+  } @else if ($isPageScrolled == "true") {
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+  }
 
-    // do this on click instead using JS
-    &:hover {
-        transform: rotate(130deg)
-    }
+  // do this on click instead using JS
+  &:hover {
+    transform: rotate(130deg);
+  }
 }
