@@ -89,6 +89,7 @@ a {
   max-width: 1920px;
   width: 100%;
   margin: 0 auto;
+  transition: all 0.2s ease-in;
 }
 .main-container header {
   width: 100%;
@@ -121,12 +122,14 @@ a {
   bottom: 0;
   left: 0;
   width: 0;
-  background-color: #111111;
   height: 2px;
   transition: width 0.3s ease-in-out;
 }
 .main-container header .header-top-content-wrapper #header-top-nav ul li > a:hover::after {
   width: 100%;
+}
+.main-container header .header-top-content-wrapper #header-top-nav ul li > a::after {
+  background-color: #111111;
 }
 .main-container header .header-bottom {
   height: 60px;
@@ -154,12 +157,14 @@ a {
   bottom: 0;
   left: 0;
   width: 0;
-  background-color: #111111;
   height: 2px;
   transition: width 0.3s ease-in-out;
 }
 .main-container header .header-bottom #header-bottom-nav ul li > a:hover::after {
   width: 100%;
+}
+.main-container header .header-bottom #header-bottom-nav ul li > a::after {
+  background-color: #111111;
 }
 .main-container header .header-bottom .header-bottom-user-interactions-cont {
   width: 20%;
@@ -279,12 +284,14 @@ a {
   bottom: 0;
   left: 0;
   width: 0;
-  background-color: #111111;
   height: 2px;
   transition: width 0.3s ease-in-out;
 }
 .main-container .products-list-section aside ul li > a:hover::after {
   width: 100%;
+}
+.main-container .products-list-section aside ul li > a::after {
+  background-color: #111111;
 }
 .main-container .products-list-section aside ul li {
   padding: 0;
@@ -465,8 +472,11 @@ a {
   color: #111111;
 }
 .main-container .essentials-section .essentials-content-cont .essentials-content-wrapper .essentials-img-cont .essentials-button:hover {
-  background-color: #111111;
+  background-color: #6b6b6b;
   color: #fff;
+}
+.main-container .essentials-section .essentials-content-cont .essentials-content-wrapper .essentials-img-cont .essentials-button:hover {
+  background-color: #111111;
 }
 .main-container footer {
   color: #fff;
@@ -541,4 +551,94 @@ a {
 }
 .main-container footer .footer-copy-and-FAQ .footer-sub-nav-cont nav ul a:hover {
   text-decoration: underline;
+}
+
+.main-container-scrolled {
+  background-color: #111111;
+  color: #fff;
+  transition: all 0.2s ease-in;
+}
+.main-container-scrolled header {
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  transition: all 0.3s ease-in;
+  background-color: #fff;
+}
+.main-container-scrolled .products-list-section aside ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid #fff;
+}
+.main-container-scrolled .products-list-section aside ul li {
+  padding: 0 14px;
+}
+.main-container-scrolled .products-list-section aside ul li > a {
+  position: relative;
+  padding-bottom: 5px;
+}
+.main-container-scrolled .products-list-section aside ul li > a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  transition: width 0.3s ease-in-out;
+}
+.main-container-scrolled .products-list-section aside ul li > a:hover::after {
+  width: 100%;
+}
+.main-container-scrolled .products-list-section aside ul li > a::after {
+  background-color: #fff;
+}
+.main-container-scrolled .products-list-section aside ul li {
+  padding: 0;
+}
+.main-container-scrolled .products-list-section aside ul li a {
+  color: #fff;
+}
+.main-container-scrolled .products-list-section aside .filters-cont .filter-cont .checkboxes-cont .checkbox-header button {
+  width: 5px;
+  height: 10px;
+  border: none;
+  transform: rotate(-50deg);
+  transition: transform 0.3s ease-in-out;
+  background-color: transparent;
+  cursor: pointer;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+}
+.main-container-scrolled .products-list-section aside .filters-cont .filter-cont .checkboxes-cont .checkbox-header button:hover {
+  transform: rotate(130deg);
+}
+.main-container-scrolled .products-list-section aside .filters-cont .filter-cont:not(:last-child) {
+  border-bottom: 1px solid #fff;
+}
+.main-container-scrolled .products-list-section select {
+  background-color: transparent;
+  color: #fff;
+}
+.main-container-scrolled .products-list-section select option {
+  color: #111111;
+}
+.main-container-scrolled .button {
+  padding: 7.5px 23.92px;
+  border: none;
+  border-radius: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  background-color: #fff;
+  color: #111111;
+}
+.main-container-scrolled .button:hover {
+  background-color: #6b6b6b;
+  color: #fff;
 }/*# sourceMappingURL=main.css.map */

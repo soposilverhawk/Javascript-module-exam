@@ -1,4 +1,4 @@
-@mixin headerLists($isPageNav: "true") {
+@mixin headerLists($isPageNav: "true", $isPageScrolled: "false") {
   @include flex();
   @if ($isPageNav == "true") {
     li:not(:last-child) {
@@ -20,12 +20,21 @@
     bottom: 0;
     left: 0;
     width: 0;
-    background-color: $bg-primary;
     height: 2px;
     transition: width 0.3s ease-in-out;
   }
 
   li > a:hover::after {
     width: 100%;
+  }
+
+  @if ($isPageScrolled == "false") {
+    li > a::after {
+      background-color: $bg-primary;
+    }
+  } @else if ($isPageScrolled == "true") {
+    li > a::after {
+      background-color: #fff;
+    }
   }
 }

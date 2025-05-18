@@ -2,7 +2,9 @@ import { loadHeader } from "./loadHeader.js";
 import { loadFooter } from "./loadFooter.js";
 loadHeader();
 loadFooter();
+
 const productsContainerWrapper = document.getElementById("products-wrapper");
+const mainContainer = document.querySelector(".main-container");
 let allProducts = [];
 let productsSet = [];
 let setStartIdx = 0;
@@ -128,17 +130,31 @@ function setupPaginationControls() {
   });
 }
 
-function handleScroll () {
-  const sectionsContainer = document.querySelector(".main-container");
-  sectionsContainer.classList.toggle("sections-container-scrolled");
+function handleScroll(isScrolledDown) {
+  if (isScrolledDown) {
+    mainContainer.classList.add("main-container-scrolled");
+  } else {
+    mainContainer.classList.remove("main-container-scrolled");
+  }
 }
 
-handleScroll();
+// handleScroll();
+window.addEventListener("scroll", () => {
+  if (window.scrollY >= 80) {
+    handleScroll(true);
+  } else {
+    handleScroll(false);
+  }
+
+  if ("scrollRestoration" in history) {
+    history.scrollRestoration = "manual";
+  }
+
+  console.log(window.scrollY)
+});
 
 // fix the issue with the first page-btn not getting the active class
 
 // tomorrow:
 // 1. do search functionality tomorrow by name
 // 2. scroll on 80px to change bg to black, make text white and header fixed
-
-
