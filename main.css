@@ -565,6 +565,9 @@ a {
   transition: all 0.3s ease-in;
   background-color: #fff;
 }
+.main-container-scrolled .products-list-section .products-container #products-wrapper .product-card {
+  color: #fff;
+}
 .main-container-scrolled .products-list-section aside ul {
   display: flex;
   flex-direction: row;

@@ -425,11 +425,12 @@
   }
 }
 
+// styles that will apply when the page is scrolled past 80px height
+
 .main-container-scrolled {
   background-color: $bg-primary;
   color: #fff;
   transition: all 0.2s ease-in;
-  // padding-top: 100px;
 
   header {
     position: fixed;
@@ -440,6 +441,13 @@
   }
 
   .products-list-section {
+    .products-container {
+      #products-wrapper {
+        .product-card {
+          color: #fff;
+        }
+      }
+    }
     aside {
       ul {
         @include headerLists("false", "true");
@@ -484,7 +492,6 @@
 }
 
 .product-details-main {
-
   h1 {
     font-size: 15px;
     line-height: 24px;

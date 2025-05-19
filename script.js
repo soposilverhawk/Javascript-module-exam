@@ -158,19 +158,19 @@ function handleScroll(isScrolledDown) {
   }
 }
 
-// window.addEventListener("scroll", () => {
-//   if (window.scrollY >= 80) {
-//     handleScroll(true);
-//   } else {
-//     handleScroll(false);
-//   }
+window.addEventListener("scroll", () => {
+  if (window.scrollY >= 80) {
+    handleScroll(true);
+  } else {
+    handleScroll(false);
+  }
 
-//   if ("scrollRestoration" in history) {
-//     history.scrollRestoration = "manual";
-//   }
+  if ("scrollRestoration" in history) {
+    history.scrollRestoration = "manual";
+  }
 
-//   console.log(window.scrollY);
-// });
+  console.log(window.scrollY);
+});
 
 function handleSearch(allProducts, userInput) {
   const normalizedInput = userInput.toLowerCase().trim();
@@ -186,10 +186,7 @@ function handleSearch(allProducts, userInput) {
   updateActivePageButton();
 }
 
-// function getProductDetailsPage (allProductsCards) {
-//   allProductsCards.forEach((productCard) =>)
-// }
+
 // tomorrow:
-// 1. On click on each of the products it should take the user to the product details page
-// 2. Fix the issue with the first page-btn not getting active class
-// 3. fix the styling issue with the page-btns
+// 1. Fix the issue with the first page-btn not getting active class
+// 2. fix the styling issue with the page-btns
