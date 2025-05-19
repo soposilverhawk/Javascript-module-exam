@@ -175,6 +175,10 @@ function handleSearch(allProducts, userInput) {
   setupPaginationControls();
   updateActivePageButton();
 }
+
+function getProductDetailsPage () {
+  
+}
 // tomorrow:
 // 1. On click on each of the products it should take the user to the product details page
 // 2. Fix the issue with the first page-btn not getting active class

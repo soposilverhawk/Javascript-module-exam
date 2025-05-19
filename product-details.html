@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Nike E-commerce Website with different gymwear, sportswear, accessories and boots designed designed to make your sport activities easier"
+    />
+    <meta
+      name="keywords"
+      content="Nike, sportswear, boots, tank-tops, shirts, leggings, bags, gymwear, sports bras, tops, hoodies, sweatshirts, jackets, trousers, tights, shorts, tracksuits, jumpsuits, rompers, skirts, dresses, socks, accessories, equipment, men, women, unisex"
+    />
+    <meta name="author" content="Sopo Bichinashvili" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="img/png"
+      sizes="32x32"
+      href="./imgs/logo/Nike-logo.png"
+    />
+    <link rel="stylesheet" href="./main.css" />
+    <title></title>
+    <!-- add a title equal to product-title using JS -->
+  </head>
+  <body>
+    <div class="main-container">
+      <header id="header"></header>
+      <main>
+        <h1>Member Access</h1>
+        <section class="product-details container general-flex">
+          <div class="product-img-container">
+            <img src="" alt="">
+          </div>
+          <div class="product-description-container">
+            <div class="product-styles-container">
+                <!-- different product color variatons go here -->
+            </div>
+            <div class="product-description">
+              Turn style on its head with this crafted take on the Air Jordan 1
+              Mid. Its "inside out"-inspired construction, including unique
+              layering and exposed foam accents, ups the ante on this timeless
+              Jordan Brand silhouette. Details like the deco stitching on the
+              Swoosh add coveted appeal, while the unexpected shading, rich
+              mixture of materials and aged midsole aesthetic give this release
+              an artisan finish.
+            </div>
+            <div class="product-styles-information-container">
+              <p id="product-color">
+                Colour: <span id="available-colors"></span>
+              </p>
+              <p id="product-style">
+                Style: <span id="available-styles"></span>
+              </p>
+            </div>
+            <button>View Product Details</button>
+          </div>
+        </section>
+      </main>
+      <footer id="footer"></footer>
+    </div>
+    <script type="module" src="./loadHeader.js"></script>
+    <script type="module" src="./loadFooter.js"></script>
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
