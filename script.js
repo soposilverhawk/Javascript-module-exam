@@ -46,9 +46,19 @@ function generateProductSetHTML(productsSet) {
   productsContainerWrapper.innerHTML = "";
   productsSet.forEach(
     ({ imageUrl, shortdescription, status, Title, category, price, id }) => {
-      const productContainer = document.createElement("div");
+      const productContainer = document.createElement("a");
       productContainer.classList.add("product-card");
-      productContainer.setAttribute("id", id);
+
+      const productContainerAttributes = {
+        id: id,
+        href: `product-details.html?id=${id}`,
+        target: "_blank"
+      }
+
+      for (const [key, value] of Object.entries(productContainerAttributes)) {
+        productContainer.setAttribute(key, value)
+      }
+
       productContainer.innerHTML = `
         <div class="product-img">
             <img src="${imageUrl}" alt="${shortdescription}" />
@@ -148,19 +158,19 @@ function handleScroll(isScrolledDown) {
   }
 }
 
-window.addEventListener("scroll", () => {
-  if (window.scrollY >= 80) {
-    handleScroll(true);
-  } else {
-    handleScroll(false);
-  }
+// window.addEventListener("scroll", () => {
+//   if (window.scrollY >= 80) {
+//     handleScroll(true);
+//   } else {
+//     handleScroll(false);
+//   }
 
-  if ("scrollRestoration" in history) {
-    history.scrollRestoration = "manual";
-  }
+//   if ("scrollRestoration" in history) {
+//     history.scrollRestoration = "manual";
+//   }
 
-  console.log(window.scrollY);
-});
+//   console.log(window.scrollY);
+// });
 
 function handleSearch(allProducts, userInput) {
   const normalizedInput = userInput.toLowerCase().trim();
@@ -176,9 +186,9 @@ function handleSearch(allProducts, userInput) {
   updateActivePageButton();
 }
 
-function getProductDetailsPage () {
-  
-}
+// function getProductDetailsPage (allProductsCards) {
+//   allProductsCards.forEach((productCard) =>)
+// }
 // tomorrow:
 // 1. On click on each of the products it should take the user to the product details page
 // 2. Fix the issue with the first page-btn not getting active class
