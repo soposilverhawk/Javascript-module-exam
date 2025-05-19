@@ -29,7 +29,7 @@ fetch("data.json")
 
       const productsSearchUserInput =
         document.getElementById("products-search").value;
-      const test = handleSearch(allProducts, productsSearchUserInput);
+      handleSearch(allProducts, productsSearchUserInput);
     });
   })
   .catch((err) => {
@@ -52,11 +52,11 @@ function generateProductSetHTML(productsSet) {
       const productContainerAttributes = {
         id: id,
         href: `product-details.html?id=${id}`,
-        target: "_blank"
-      }
+        target: "_blank",
+      };
 
       for (const [key, value] of Object.entries(productContainerAttributes)) {
-        productContainer.setAttribute(key, value)
+        productContainer.setAttribute(key, value);
       }
 
       productContainer.innerHTML = `
@@ -186,7 +186,7 @@ function handleSearch(allProducts, userInput) {
   updateActivePageButton();
 }
 
-
 // tomorrow:
 // 1. Fix the issue with the first page-btn not getting active class
 // 2. fix the styling issue with the page-btns
+// 3. fix  the issue with flex display of cards when there's only one item being displayed on the pages
