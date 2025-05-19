@@ -25,14 +25,14 @@
   <body>
     <div class="main-container">
       <header id="header"></header>
-      <main>
+      <main class="product-details-main">
         <h1>Member Access</h1>
         <section class="product-details container general-flex">
           <div class="product-img-container">
-            <img src="" alt="">
+            <img src="" alt="" class="product-main-img">
           </div>
-          <div class="product-description-container">
-            <div class="product-styles-container">
+          <div class="product-details-container">
+            <div class="product-styles-container general-flex">
                 <!-- different product color variatons go here -->
             </div>
             <div class="product-description">
@@ -52,14 +52,15 @@
                 Style: <span id="available-styles"></span>
               </p>
             </div>
-            <button>View Product Details</button>
+            <button class="product-details-btn">View Product Details</button>
           </div>
         </section>
       </main>
       <footer id="footer"></footer>
     </div>
+    <script type="module" src="./product-details.js"></script>
     <script type="module" src="./loadHeader.js"></script>
     <script type="module" src="./loadFooter.js"></script>
-    <script type="module" src="./script.js"></script>
+    <!-- <script type="module" src="./script.js"></script> -->
   </body>
 </html>
