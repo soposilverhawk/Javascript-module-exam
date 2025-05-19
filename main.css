@@ -169,12 +169,12 @@ a {
 .main-container header .header-bottom .header-bottom-user-interactions-cont {
   width: 20%;
 }
-.main-container header .header-bottom .header-bottom-user-interactions-cont #search-cont {
+.main-container header .header-bottom .header-bottom-user-interactions-cont #search-form {
   width: 135px;
   height: 40px;
   position: relative;
 }
-.main-container header .header-bottom .header-bottom-user-interactions-cont #search-cont input {
+.main-container header .header-bottom .header-bottom-user-interactions-cont #search-form input {
   width: 100%;
   height: 100%;
   border-radius: 100px;
@@ -182,11 +182,11 @@ a {
   border: none;
   padding-left: 45px;
 }
-.main-container header .header-bottom .header-bottom-user-interactions-cont #search-cont input:focus {
+.main-container header .header-bottom .header-bottom-user-interactions-cont #search-form input:focus {
   outline: none;
   border: none;
 }
-.main-container header .header-bottom .header-bottom-user-interactions-cont #search-cont #search-btn {
+.main-container header .header-bottom .header-bottom-user-interactions-cont #search-form #search-btn {
   position: absolute;
   left: 3%;
   top: 20%;

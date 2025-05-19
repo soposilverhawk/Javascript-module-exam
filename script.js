@@ -11,6 +11,7 @@ let setStartIdx = 0;
 let setEndIdx = 6;
 let currentPage = 1;
 let allProductsPagesNum;
+let filteredProductsPagesNum;
 
 fetch("data.json")
   .then((res) => res.json())
@@ -21,14 +22,23 @@ fetch("data.json")
     generateProductsPaginationHTML(allProductsPagesNum);
     setupPaginationControls();
     updateActivePageButton();
+
+    const productsSearchForm = document.getElementById("search-form");
+    productsSearchForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const productsSearchUserInput =
+        document.getElementById("products-search").value;
+      const test = handleSearch(allProducts, productsSearchUserInput);
+    });
   })
   .catch((err) => {
     console.log(err);
     productsContainerWrapper.innerHTML = `An error occurred while trying to load the data: ${err}`;
   });
 
-function getProductsSet(startingIdx, endingIdx) {
-  productsSet = allProducts.slice(startingIdx, endingIdx);
+function getProductsSet(startingIdx, endingIdx, arrayToRender = allProducts) {
+  productsSet = arrayToRender.slice(startingIdx, endingIdx);
   generateProductSetHTML(productsSet);
 }
 
@@ -150,10 +160,22 @@ window.addEventListener("scroll", () => {
     history.scrollRestoration = "manual";
   }
 
-  console.log(window.scrollY)
+  console.log(window.scrollY);
 });
 
+function handleSearch(allProducts, userInput) {
+  const normalizedInput = userInput.toLowerCase().trim();
 
+  const filteredProducts = allProducts.filter((item) =>
+    item.Title.toLowerCase().includes(normalizedInput)
+  );
+
+  getProductsSet(0, filteredProducts.length, filteredProducts);
+  filteredProductsPagesNum = generateProductsPagination(filteredProducts);
+  generateProductsPaginationHTML(filteredProductsPagesNum);
+  setupPaginationControls();
+  updateActivePageButton();
+}
 // tomorrow:
 // 1. do search functionality tomorrow by name;
 // 2. On click on each of the products it should take the user to the product details page
