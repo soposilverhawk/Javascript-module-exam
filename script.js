@@ -148,7 +148,6 @@ function handleScroll(isScrolledDown) {
   }
 }
 
-// handleScroll();
 window.addEventListener("scroll", () => {
   if (window.scrollY >= 80) {
     handleScroll(true);
@@ -177,6 +176,6 @@ function handleSearch(allProducts, userInput) {
   updateActivePageButton();
 }
 // tomorrow:
-// 1. do search functionality tomorrow by name;
-// 2. On click on each of the products it should take the user to the product details page
-// 3. Fix the issue with the first page-btn not getting active class
+// 1. On click on each of the products it should take the user to the product details page
+// 2. Fix the issue with the first page-btn not getting active class
+// 3. fix the styling issue with the page-btns
