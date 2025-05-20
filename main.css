@@ -395,8 +395,8 @@ a {
 }
 .main-container .products-list-section .products-list-section-content .products-container #products-pagination-wrapper {
   max-width: 600px;
-  width: 100%;
   margin-top: 51px;
+  background-color: red;
 }
 .main-container .products-list-section .products-list-section-content .products-container #products-pagination-wrapper .page-btn,
 .main-container .products-list-section .products-list-section-content .products-container #products-pagination-wrapper .prev-btn,
