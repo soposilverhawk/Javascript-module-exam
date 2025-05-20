@@ -21,6 +21,13 @@ fetch("data.json")
     allProductsPagesNum = generateProductsPagination(allProducts);
     generateProductsPaginationHTML(allProductsPagesNum);
     setupPaginationControls();
+    console.log("All page buttons:", document.querySelectorAll(".page-btn"));
+    console.log("Current page:", currentPage);
+    console.log("Trying to activate button with ID:", currentPage.toString());
+    console.log(
+      "Button found:",
+      document.getElementById(currentPage.toString())
+    );
     updateActivePageButton();
 
     const productsSearchForm = document.getElementById("search-form");
@@ -87,7 +94,7 @@ function generateProductsPaginationHTML(totalPagesCount) {
   let buttonsHTML = `<button class="prev-btn">prev</button>`;
 
   for (let i = 1; i <= totalPagesCount; i++) {
-    buttonsHTML += `<button class="page-btn" id="${i}">${i}</button>`;
+    buttonsHTML += `<button class="page-btn" id="product-page-${i}">${i}</button>`;
   }
 
   buttonsHTML += `<button class="next-btn">next</button>`;
@@ -102,15 +109,15 @@ function updateIndicesFromPage() {
 
 function updateActivePageButton() {
   const productsBtns = document.querySelectorAll(".page-btn");
-  console.log(productsBtns);
   productsBtns.forEach((btn) => {
     btn.classList.remove("active-page");
-    console.log(btn);
   });
 
-  const activeBtn = document.getElementById(currentPage.toString());
+  const activeBtn = document.getElementById(`product-page-${currentPage}`);
+  console.log(activeBtn);
   if (activeBtn) {
     activeBtn.classList.add("active-page");
+    console.log(activeBtn);
   }
 }
 
@@ -139,7 +146,12 @@ function setupPaginationControls() {
 
   productsBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
-      const selectedPage = parseInt(btn.id);
+      const selectedPageStr = btn.id;
+      const selectedPage = parseInt(
+        selectedPageStr.split("product-page-")[1],
+        10
+      );
+
       if (currentPage !== selectedPage) {
         currentPage = selectedPage;
         updateIndicesFromPage();
@@ -168,8 +180,6 @@ window.addEventListener("scroll", () => {
   if ("scrollRestoration" in history) {
     history.scrollRestoration = "manual";
   }
-
-  console.log(window.scrollY);
 });
 
 function handleSearch(allProducts, userInput) {
@@ -188,4 +198,3 @@ function handleSearch(allProducts, userInput) {
 
 // tomorrow:
 // 1. Fix the issue with the first page-btn not getting active class
-
