@@ -195,6 +195,3 @@ function handleSearch(allProducts, userInput) {
   setupPaginationControls();
   updateActivePageButton();
 }
-
-// tomorrow:
-// 1. Fix the issue with the first page-btn not getting active class
