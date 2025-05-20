@@ -188,4 +188,4 @@ function handleSearch(allProducts, userInput) {
 
 // tomorrow:
 // 1. Fix the issue with the first page-btn not getting active class
-// 3. fix  the issue with flex display of cards when there's only one item being displayed on the pages
+

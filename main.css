@@ -365,12 +365,12 @@ a {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  -moz-column-gap: 3%;
-       column-gap: 3%;
-  row-gap: 18px;
+  gap: 2rem;
 }
 .main-container .products-list-section .products-list-section-content .products-container #products-wrapper .product-card {
-  width: 25%;
+  flex: 1 1 25%;
+  max-width: 25%;
+  min-width: 300px;
   height: 533px;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
