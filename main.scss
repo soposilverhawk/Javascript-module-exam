@@ -185,15 +185,22 @@
             }
 
             .checkbox-group {
-              background-color: red;
               display: none;
+            }
+
+            .checkbox-group-active {
+              display: flex;
             }
 
             .checkbox-header {
               width: 100%;
+              margin-bottom: 10px;
 
               button {
                 @include collapseExpandBtn();
+              }
+              .expanded {
+                transform: rotate(130deg);
               }
             }
           }

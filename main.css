@@ -320,11 +320,14 @@ a {
   cursor: pointer;
 }
 .main-container .products-list-section aside .filters-cont .filter-cont .checkboxes-cont .checkbox-group {
-  background-color: red;
   display: none;
+}
+.main-container .products-list-section aside .filters-cont .filter-cont .checkboxes-cont .checkbox-group-active {
+  display: flex;
 }
 .main-container .products-list-section aside .filters-cont .filter-cont .checkboxes-cont .checkbox-header {
   width: 100%;
+  margin-bottom: 10px;
 }
 .main-container .products-list-section aside .filters-cont .filter-cont .checkboxes-cont .checkbox-header button {
   width: 5px;
@@ -337,7 +340,7 @@ a {
   border-left: 2px solid #111111;
   border-bottom: 2px solid #111111;
 }
-.main-container .products-list-section aside .filters-cont .filter-cont .checkboxes-cont .checkbox-header button:hover {
+.main-container .products-list-section aside .filters-cont .filter-cont .checkboxes-cont .checkbox-header .expanded {
   transform: rotate(130deg);
 }
 .main-container .products-list-section aside .filters-cont .filter-cont #prices-options-cont,
@@ -617,9 +620,6 @@ a {
   cursor: pointer;
   border-left: 2px solid #fff;
   border-bottom: 2px solid #fff;
-}
-.main-container-scrolled .products-list-section aside .filters-cont .filter-cont .checkboxes-cont .checkbox-header button:hover {
-  transform: rotate(130deg);
 }
 .main-container-scrolled .products-list-section aside .filters-cont .filter-cont:not(:last-child) {
   border-bottom: 1px solid #fff;

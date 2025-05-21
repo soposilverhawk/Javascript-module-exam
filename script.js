@@ -21,13 +21,6 @@ fetch("data.json")
     allProductsPagesNum = generateProductsPagination(allProducts);
     generateProductsPaginationHTML(allProductsPagesNum);
     setupPaginationControls();
-    console.log("All page buttons:", document.querySelectorAll(".page-btn"));
-    console.log("Current page:", currentPage);
-    console.log("Trying to activate button with ID:", currentPage.toString());
-    console.log(
-      "Button found:",
-      document.getElementById(currentPage.toString())
-    );
     updateActivePageButton();
 
     const productsSearchForm = document.getElementById("search-form");
@@ -114,10 +107,8 @@ function updateActivePageButton() {
   });
 
   const activeBtn = document.getElementById(`product-page-${currentPage}`);
-  console.log(activeBtn);
   if (activeBtn) {
     activeBtn.classList.add("active-page");
-    console.log(activeBtn);
   }
 }
 
@@ -195,3 +186,20 @@ function handleSearch(allProducts, userInput) {
   setupPaginationControls();
   updateActivePageButton();
 }
+
+const checkboxesContainers = document.querySelectorAll(".checkboxes-cont");
+
+checkboxesContainers.forEach((container) => {
+  container.addEventListener("click", (e) => {
+    const collapseExpandBtn = e.target.closest(".collapse-expand-btn");
+
+    if (e.target == collapseExpandBtn) {
+      const checkboxGroups = container.querySelectorAll(".checkbox-group");
+      console.log(checkboxGroups);
+      checkboxGroups.forEach((group) =>
+        group.classList.toggle("checkbox-group-active")
+      );
+      collapseExpandBtn.classList.toggle("expanded");
+    }
+  });
+});
